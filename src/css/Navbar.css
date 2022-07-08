@@ -6,7 +6,7 @@
   width: 338px;
   height: 90px;
   position: relative;
-  background-image: url(/public/images/logo.webp);
+  background-image: url(../media/images/logo.webp);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -89,6 +89,7 @@
   white-space: nowrap;
   border: 1px solid rgb(255 255 255 / 50%);
   color: #f7f7f7;
+  padding: 6px 48px;
 }
 .css-69324s button:hover {
   border: 1px solid #606060;
