@@ -5,13 +5,15 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
-import videoSource from '../media/videos/video-1.mp4';
 
 function HeroSection() {
   return (
     <div className="hero-container">
       <video autoPlay="autoplay" loop="loop" muted>
-        <source src={videoSource} type="video/mp4" />
+        <source
+          src="https://www.animeselection.com/media/videos/video-1.mp4"
+          type="video/mp4"
+        />
         Your browser does not support the video tag.
       </video>
       <h2>Isao Takahata</h2>
