@@ -33,7 +33,6 @@ function Navbar() {
                 Home
               </Link>
             </li>
-            {console.log(closeMobileMenu)};
             <li className="nav-item">
               <Link
                 to="/isao-takahata"
