@@ -6,7 +6,7 @@ import '../css/Recommended.css';
 function RecommendedItem(props) {
   return (
     <>
-      <article>
+      <div className="recom-box">
         <img src={props.src} alt={props.title} />
         <div className="text">
           <h4>{props.title}</h4>
@@ -20,7 +20,7 @@ function RecommendedItem(props) {
             </Button>
           </Stack>
         </div>
-      </article>
+      </div>
     </>
   );
 }
