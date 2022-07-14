@@ -84,13 +84,13 @@
   display: none;
 }
 /* Button library MUI */
-.css-69324s button {
+#btn-navbar {
   white-space: nowrap;
   border: 1px solid rgb(255 255 255 / 50%);
   color: #f7f7f7;
   padding: 6px 48px;
 }
-.css-69324s button:hover {
+#btn-navbar:hover {
   border: 1px solid #606060;
 }
 /* Responsive */

@@ -35,18 +35,18 @@ video {
   align-items: center;
   text-align: center;
 }
-.css-e53awj-MuiStack-root button {
+#btn-hero {
   background-color: #fff;
   color: #000;
   padding: 8px 40px;
   white-space: nowrap;
 }
-.css-e53awj-MuiStack-root button:hover {
+#btn-hero:hover {
   background-color: transparent;
   color: #fff;
   border: 1px solid #fff;
 }
-.css-9tj150-MuiButton-endIcon {
+#play-circle {
   margin-top: -3px;
 }
 /* Responsive */

@@ -6,7 +6,7 @@ import '../css/Recommended.css';
 function RecommendedItem(props) {
   return (
     <>
-      <div className="recom-box">
+      <div className="recomm-box-item">
         <img src={props.src} alt={props.title} />
         <div className="text">
           <h4>{props.title}</h4>

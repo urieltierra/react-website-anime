@@ -89,7 +89,7 @@ function Navbar() {
             </li>
             <Box sx={{ '& button': { m: 1 } }}>
               <div className="btn-menu">
-                <Button variant="outlined" size="large">
+                <Button variant="outlined" size="large" id="btn-navbar">
                   Sign Up
                 </Button>
               </div>

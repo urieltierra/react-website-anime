@@ -12,6 +12,14 @@ h5 a {
   cursor: pointer;
   text-decoration: none;
 }
+.directors-container {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
 .header-directors {
   width: 97%;
   margin: 0 auto;
@@ -20,7 +28,6 @@ h5 a {
   font-family: 'Nunito Sans', sans-serif;
   color: #333;
   width: 97%;
-  margin-left: 1rem;
   font-weight: 900;
   font-size: 1.618rem;
   text-transform: uppercase;
@@ -42,7 +49,7 @@ h5 a {
 .directors-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 39px;
   align-items: stretch;
   max-width: 1000px;
 }
@@ -50,7 +57,7 @@ h5 a {
   height: 369px;
   width: 290px;
   background: transparent;
-  transition: all 1s;
+  transition: all 0.8s;
   position: relative;
 }
 .inner-edge:hover {
@@ -59,7 +66,7 @@ h5 a {
 .directors {
   height: 379px;
   width: 300px;
-  transition: all 0.8s;
+  transition: all 1s;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -70,10 +77,12 @@ h5 a {
 .director-1 {
   background: url('../media/images/director-1.webp') center center no-repeat;
   background-size: 300px;
+  filter: grayscale(100%);
 }
 .director-1:hover {
-  background: url('../media/images/director-1-1.webp') left center no-repeat;
+  background: url('../media/images/director-1.webp') left center no-repeat;
   background-size: 600px;
+  filter: grayscale(0%);
 }
 .director-1:hover h5 {
   opacity: 1;
@@ -81,10 +90,12 @@ h5 a {
 .director-2 {
   background: url('../media/images/director-2.webp') center center no-repeat;
   background-size: 300px;
+  filter: grayscale(100%);
 }
 .director-2:hover {
-  background: url('../media/images/director-2-2.webp') left center no-repeat;
+  background: url('../media/images/director-2.webp') left center no-repeat;
   background-size: 600px;
+  filter: grayscale(0%);
 }
 .director-2:hover h5 {
   opacity: 1;
@@ -92,10 +103,12 @@ h5 a {
 .director-3 {
   background: url('../media/images/director-3.webp') center center no-repeat;
   background-size: 300px;
+  filter: grayscale(100%);
 }
 .director-3:hover {
-  background: url('../media/images/director-3-3.webp') left center no-repeat;
+  background: url('../media/images/director-3.webp') left center no-repeat;
   background-size: 600px;
+  filter: grayscale(0%);
 }
 .director-3:hover h5 {
   opacity: 1;
@@ -103,10 +116,12 @@ h5 a {
 .director-4 {
   background: url('../media/images/director-4.webp') center center no-repeat;
   background-size: 300px;
+  filter: grayscale(100%);
 }
 .director-4:hover {
-  background: url('../media/images/director-4-4.webp') left center no-repeat;
+  background: url('../media/images/director-4.webp') left center no-repeat;
   background-size: 600px;
+  filter: grayscale(0%);
 }
 .director-4:hover h5 {
   opacity: 1;
@@ -114,10 +129,12 @@ h5 a {
 .director-5 {
   background: url('../media/images/director-5.webp') center center no-repeat;
   background-size: 300px;
+  filter: grayscale(100%);
 }
 .director-5:hover {
-  background: url('../media/images/director-5-5.webp') left center no-repeat;
+  background: url('../media/images/director-5.webp') left center no-repeat;
   background-size: 600px;
+  filter: grayscale(0%);
 }
 .director-5:hover h5 {
   opacity: 1;
@@ -125,10 +142,12 @@ h5 a {
 .director-6 {
   background: url('../media/images/director-6.webp') center center no-repeat;
   background-size: 300px;
+  filter: grayscale(100%);
 }
 .director-6:hover {
-  background: url('../media/images/director-6-6.webp') left center no-repeat;
+  background: url('../media/images/director-6.webp') left center no-repeat;
   background-size: 600px;
+  filter: grayscale(0%);
 }
 .director-6:hover h5 {
   opacity: 1;
@@ -136,19 +155,29 @@ h5 a {
 /* Responsive */
 @media screen and (max-width: 960px) {
   .header-directors {
-    width: 655px;
+    width: 690px;
     margin: 0 auto;
   }
   .directors-grid {
+    grid-gap: 90px;
     max-width: 875px;
   }
 }
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 690px) {
+  .directors-grid {
+    grid-gap: 20px;
+  }
+  .header-directors {
+    width: 620px;
+  }
+}
+@media screen and (max-width: 629px) {
   .directors-grid {
     max-width: 579px;
   }
   .header-directors {
     width: 335px;
+    padding-left: 18px;
     margin: 0 auto;
   }
 }

@@ -20,12 +20,16 @@ function HeroSection() {
       <p>The Anime genius who changed our lives</p>
       <div className="hero-btns">
         <Box sx={{ '& button': { m: 1 } }}>
-          <Button variant="outlined" size="large">
+          <Button variant="outlined" size="large" id="btn-navbar">
             Filmography
           </Button>
         </Box>
         <Stack direction="row" spacing={2}>
-          <Button variant="contained" endIcon={<PlayCircleOutlineIcon />}>
+          <Button
+            variant="contained"
+            endIcon={<PlayCircleOutlineIcon id="play-circle" />}
+            id="btn-hero"
+          >
             Watch videos
           </Button>
         </Stack>
