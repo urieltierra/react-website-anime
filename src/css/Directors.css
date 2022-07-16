@@ -1,4 +1,4 @@
-h5 {
+.inner-edge h5 {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 25px;
   color: #fff;
@@ -7,7 +7,7 @@ h5 {
   transition: opacity 1s;
   background-color: #0000004d;
 }
-h5 a {
+.inner-edge h5 a {
   color: #fff;
   cursor: pointer;
   text-decoration: none;
