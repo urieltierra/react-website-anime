@@ -15,7 +15,7 @@ function NavbarSingle() {
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          <h1
+          <div
             className="logo"
             title="Anime Selection - Website dedicated to the most influential anime movies and series of all time"
             onClick={closeMobileMenu}
@@ -23,7 +23,7 @@ function NavbarSingle() {
             <Link to="/" title="Anime Selection">
               <span className="hidden-text">Anime Selection</span>
             </Link>
-          </h1>
+          </div>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>

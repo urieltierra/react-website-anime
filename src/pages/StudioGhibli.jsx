@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import NavbarSingle from '../components/NavbarSingle';
 import Footer from '../components/Footer';
-import '../css/StudioGhibli.css';
+import '../css/Single.css';
 import '../css/Recommended.css';
 
 const getAnimes = async () => {
