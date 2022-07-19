@@ -71,7 +71,7 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                to="/recommended"
+                to="/recommended-anime"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >

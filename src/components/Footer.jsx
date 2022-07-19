@@ -57,7 +57,7 @@ function Footer() {
                     <Link to="/studio-ghibli">Studio Ghibli</Link>
                   </li>
                   <li>
-                    <Link to="/recommended">Recommended</Link>
+                    <Link to="/recommended-anime">Recommended</Link>
                   </li>
                   <li>
                     <Link to="/soundtracks">Soundtracks</Link>

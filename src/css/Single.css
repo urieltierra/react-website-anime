@@ -15,6 +15,14 @@
   color: #fff;
   background-size: cover;
 }
+.img-bg-recommended {
+  background: url(../media/images/recommended-anime.webp) no-repeat fixed center;
+  height: 400px;
+  margin: 0 auto;
+  padding: 250px 0;
+  color: #fff;
+  background-size: cover;
+}
 .title-text {
   font-family: 'Nunito Sans', sans-serif;
   text-transform: uppercase;
@@ -79,7 +87,6 @@ select {
 }
 .box-img-single {
   position: relative;
-  z-index: 5;
   overflow: hidden;
   vertical-align: middle;
   border-style: none;
@@ -126,6 +133,60 @@ select {
 .single-info {
   color: #fff;
   padding: 0px 10px 5px;
+}
+.container-single {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  align-content: center;
+  margin: 100px auto;
+}
+
+.container-single-left {
+  padding: 10px;
+  flex: 15%;
+}
+.container-single-right {
+  padding: 10px;
+  flex: 40%;
+}
+.container-single-right h4 {
+  font-family: 'Nunito Sans', sans-serif;
+  color: #333;
+  font-weight: 900;
+  font-size: 1.618rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1ch;
+  line-height: 1;
+  padding-bottom: 0.5em;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.container-single-right h4:after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background-color: #ff5351;
+  bottom: 0;
+}
+.container-single-right p span {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  font-style: normal;
+}
+.container-single-right p {
+  font-family: 'Poppins', sans-serif;
+  color: #757575;
+  font-size: 14px;
+  margin: 10px auto;
 }
 /* Responsive */
 @media screen and (max-width: 576px) {
