@@ -21,6 +21,7 @@ function AnimeSinglePage() {
   const [animes, setAnimes] = useState([]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const fetchAnimes = async () => {
       try {
         const data = await getAnimes(id);
@@ -35,7 +36,7 @@ function AnimeSinglePage() {
     <>
       <NavbarSingle />
       <header>
-        <div className="img-bg-recommended">
+        <div className="img-bg recommended">
           <h1 className="title-text">{animes.title}</h1>
         </div>
       </header>

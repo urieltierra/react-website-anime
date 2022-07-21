@@ -7,9 +7,7 @@ import { Link } from 'react-router-dom';
 
 const getAnimes = async () => {
   try {
-    const response = await fetch(
-      'https://www.animeselection.com/media/api/favorites.json',
-    );
+    const response = await fetch('https://api.jikan.moe/v4/people/1117/full');
     const animes = await response.json();
     return animes;
   } catch (error) {
@@ -17,7 +15,7 @@ const getAnimes = async () => {
   }
 };
 
-function Recommended() {
+function MakotoShinkai() {
   const [animes, setAnimes] = useState([]);
   const [animesToRender, setAnimesToRender] = useState([]);
   const [error, setError] = useState(null);
@@ -41,29 +39,44 @@ function Recommended() {
     <>
       <NavbarSingle />
       <header>
-        <div className="img-bg recommended">
-          <h1 className="title-text">Recommended anime</h1>
+        <div className="img-bg makotoshinkai">
+          <h1 className="title-text">Makoto Shinkai</h1>
         </div>
       </header>
       <div className="single-container">
         <div className="box-description">
-          <h5 className="single-text">Movies, TV Series and OVAs</h5>
+          <h5 className="single-text">
+            Animator, filmmaker, author, manga artist
+          </h5>
           <div className="line-description"></div>
           <div className="single-container">
             <p className="single-text-description">
-              It is now the year 2022, which marks a new era of anime, including
-              new stories, new inspirations. But everything has to come from
-              somewhere and so, it is a good time to look back and honor some of
-              the anime series and movies which helped to shape the everchanging
-              anime world nowadays. So with no further ado, here are the Most
-              Influential Anime of All Time!
+              Makoto Niitsu (新津 誠, Niitsu Makoto); born February 9, 1973),
+              known as Makoto Shinkai (新海 誠, Shinkai Makoto), is a Japanese
+              animator, filmmaker, author, and manga artist. Shinkai began his
+              career as a video game animator with Nihon Falcom in 1996, and
+              gained recognition as a filmmaker with the release of the original
+              video animation (OVA) She and Her Cat (1999). Beginning his
+              longstanding association with CoMix Wave Films, Shinkai then
+              released the science-fiction OVA Voices of a Distant Star in 2002,
+              and followed this with his debut feature film The Place Promised
+              in Our Early Days (2004).
+            </p>
+            <p className="single-text-description">
+              Shinkai's second feature film, the romantic drama anthology 5
+              Centimeters per Second (2007), gained critical acclaim, as did his
+              subsequent releases, the dramas Children Who Chase Lost Voices
+              (2011) and The Garden of Words (2013). Shinkai's 2016 fantasy
+              romance Your Name was a critical and commercial success, becoming
+              the third highest-grossing anime film of all time.His 2019 film,
+              Weathering with You, also achieved similar critical and commercial
+              success.His sixth film, Suzume no Tojimari, is scheduled for
+              release in November 2022.
             </p>
           </div>
         </div>
         <div className="box-description">
-          <h5 className="single-text">
-            The Most Influential Anime of All Time
-          </h5>
+          <h5 className="single-text">Makoto Shinkai TV and Movies</h5>
           <div className="line-description"></div>
         </div>
       </div>
@@ -86,20 +99,24 @@ function Recommended() {
                 animes &&
                 animesToRender.anime?.map((anime) => {
                   return (
-                    <div className="recomm-box-item" key={anime.mal_id}>
-                      <Link to={`/${anime.mal_id}`}>
+                    <div className="recomm-box-item" key={anime.anime.mal_id}>
+                      <Link to={`/${anime.anime.mal_id}`}>
                         <div className="single-box">
                           <div className="box-img-single">
                             <img
-                              src={anime.images.webp.large_image_url}
-                              alt={anime.title}
+                              src={anime.anime.images.webp.large_image_url}
+                              alt={anime.anime.title}
                             />
                           </div>
                           <div className="box-content-single">
                             <div className="single-title">
-                              <h4 className="text-img-single">{anime.title}</h4>
+                              <h4 className="text-img-single">
+                                {anime.anime.title}
+                              </h4>
                             </div>
-                            <p className="single-info">Type: {anime.type}</p>
+                            <p className="single-info">
+                              Occupation: {anime.position}
+                            </p>
                           </div>
                         </div>
                       </Link>
@@ -116,4 +133,4 @@ function Recommended() {
   );
 }
 
-export default Recommended;
+export default MakotoShinkai;

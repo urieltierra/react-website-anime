@@ -30,6 +30,7 @@ function StudioGhibli() {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetchAnimes();
   }, [error]);
 
@@ -49,7 +50,7 @@ function StudioGhibli() {
     <>
       <NavbarSingle />
       <header>
-        <div className="img-bg">
+        <div className="img-bg studioghibli">
           <h1 className="title-text">Studio Ghibli</h1>
         </div>
       </header>

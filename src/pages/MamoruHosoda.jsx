@@ -7,9 +7,7 @@ import { Link } from 'react-router-dom';
 
 const getAnimes = async () => {
   try {
-    const response = await fetch(
-      'https://www.animeselection.com/media/api/favorites.json',
-    );
+    const response = await fetch('https://api.jikan.moe/v4/people/5067/full');
     const animes = await response.json();
     return animes;
   } catch (error) {
@@ -17,7 +15,7 @@ const getAnimes = async () => {
   }
 };
 
-function Recommended() {
+function MamoruHosoda() {
   const [animes, setAnimes] = useState([]);
   const [animesToRender, setAnimesToRender] = useState([]);
   const [error, setError] = useState(null);
@@ -41,29 +39,33 @@ function Recommended() {
     <>
       <NavbarSingle />
       <header>
-        <div className="img-bg recommended">
-          <h1 className="title-text">Recommended anime</h1>
+        <div className="img-bg mamoruhosoda">
+          <h1 className="title-text">Mamoru Hosoda</h1>
         </div>
       </header>
       <div className="single-container">
         <div className="box-description">
-          <h5 className="single-text">Movies, TV Series and OVAs</h5>
+          <h5 className="single-text">Animation director</h5>
           <div className="line-description"></div>
           <div className="single-container">
             <p className="single-text-description">
-              It is now the year 2022, which marks a new era of anime, including
-              new stories, new inspirations. But everything has to come from
-              somewhere and so, it is a good time to look back and honor some of
-              the anime series and movies which helped to shape the everchanging
-              anime world nowadays. So with no further ado, here are the Most
-              Influential Anime of All Time!
+              Mamoru Hosoda (細田 守, Hosoda Mamoru, born September 19, 1967) is
+              a Japanese film director and animator. He was nominated for an
+              Academy Award in the category Best Animated Feature Film at the
+              91st Academy Awards for his eighth film Mirai. Formerly employed
+              at Toei Animation, he went to work at Madhouse from 2005 to 2011.
+              Hosoda left Madhouse in 2011 to establish his own animation
+              studio, Studio Chizu. He first came to public attention in the
+              early 2000s with the first two films in the Digimon Adventure
+              series and the sixth film in the One Piece series. In the later
+              2000s, he diversified more with other films, including 2006's The
+              Girl Who Leapt Through Time, 2009's Summer Wars, and 2012's Wolf
+              Children.
             </p>
           </div>
         </div>
         <div className="box-description">
-          <h5 className="single-text">
-            The Most Influential Anime of All Time
-          </h5>
+          <h5 className="single-text">Naoko Yamada TV and Movies</h5>
           <div className="line-description"></div>
         </div>
       </div>
@@ -86,20 +88,24 @@ function Recommended() {
                 animes &&
                 animesToRender.anime?.map((anime) => {
                   return (
-                    <div className="recomm-box-item" key={anime.mal_id}>
-                      <Link to={`/${anime.mal_id}`}>
+                    <div className="recomm-box-item" key={anime.anime.mal_id}>
+                      <Link to={`/${anime.anime.mal_id}`}>
                         <div className="single-box">
                           <div className="box-img-single">
                             <img
-                              src={anime.images.webp.large_image_url}
-                              alt={anime.title}
+                              src={anime.anime.images.webp.large_image_url}
+                              alt={anime.anime.title}
                             />
                           </div>
                           <div className="box-content-single">
                             <div className="single-title">
-                              <h4 className="text-img-single">{anime.title}</h4>
+                              <h4 className="text-img-single">
+                                {anime.anime.title}
+                              </h4>
                             </div>
-                            <p className="single-info">Type: {anime.type}</p>
+                            <p className="single-info">
+                              Occupation: {anime.position}
+                            </p>
                           </div>
                         </div>
                       </Link>
@@ -116,4 +122,4 @@ function Recommended() {
   );
 }
 
-export default Recommended;
+export default MamoruHosoda;

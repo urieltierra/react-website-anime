@@ -20,7 +20,12 @@ function HeroSection() {
       <p>The Anime genius who changed our lives</p>
       <div className="hero-btns">
         <Box sx={{ '& button': { m: 1 } }}>
-          <Button variant="outlined" size="large" id="btn-navbar">
+          <Button
+            href="/isao-takahata"
+            variant="outlined"
+            size="large"
+            id="btn-hero-right"
+          >
             Filmography
           </Button>
         </Box>
@@ -28,7 +33,7 @@ function HeroSection() {
           <Button
             variant="contained"
             endIcon={<PlayCircleOutlineIcon id="play-circle" />}
-            id="btn-hero"
+            id="btn-hero-left"
           >
             Watch videos
           </Button>

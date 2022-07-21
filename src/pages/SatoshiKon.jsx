@@ -7,9 +7,7 @@ import { Link } from 'react-router-dom';
 
 const getAnimes = async () => {
   try {
-    const response = await fetch(
-      'https://www.animeselection.com/media/api/favorites.json',
-    );
+    const response = await fetch('https://api.jikan.moe/v4/people/4580/full');
     const animes = await response.json();
     return animes;
   } catch (error) {
@@ -17,7 +15,7 @@ const getAnimes = async () => {
   }
 };
 
-function Recommended() {
+function SatoshiKon() {
   const [animes, setAnimes] = useState([]);
   const [animesToRender, setAnimesToRender] = useState([]);
   const [error, setError] = useState(null);
@@ -41,29 +39,32 @@ function Recommended() {
     <>
       <NavbarSingle />
       <header>
-        <div className="img-bg recommended">
-          <h1 className="title-text">Recommended anime</h1>
+        <div className="img-bg satoshikon">
+          <h1 className="title-text">Satoshi Kon</h1>
         </div>
       </header>
       <div className="single-container">
         <div className="box-description">
-          <h5 className="single-text">Movies, TV Series and OVAs</h5>
+          <h5 className="single-text">
+            Animator, film director, screenwriter, manga artist
+          </h5>
           <div className="line-description"></div>
           <div className="single-container">
             <p className="single-text-description">
-              It is now the year 2022, which marks a new era of anime, including
-              new stories, new inspirations. But everything has to come from
-              somewhere and so, it is a good time to look back and honor some of
-              the anime series and movies which helped to shape the everchanging
-              anime world nowadays. So with no further ado, here are the Most
-              Influential Anime of All Time!
+              Satoshi Kon (今 敏, Kon Satoshi, October 12, 1963 – August 24,
+              2010) was a Japanese film director, animator, screenwriter and
+              manga artist from Sapporo, Hokkaidō and a member of the Japanese
+              Animation Creators Association (JAniCA).Tsuyoshi Kon [ja], a
+              guitarist, is his brother.He was a graduate of the Graphic Design
+              department of the Musashino Art University. He is best known for
+              his acclaimed anime films Perfect Blue (1997), Millennium Actress
+              (2001), Tokyo Godfathers (2003), and Paprika (2006). He died of
+              pancreatic cancer at the age of 46 on August 24, 2010.
             </p>
           </div>
         </div>
         <div className="box-description">
-          <h5 className="single-text">
-            The Most Influential Anime of All Time
-          </h5>
+          <h5 className="single-text">Satoshi Kon TV and Movies</h5>
           <div className="line-description"></div>
         </div>
       </div>
@@ -86,20 +87,24 @@ function Recommended() {
                 animes &&
                 animesToRender.anime?.map((anime) => {
                   return (
-                    <div className="recomm-box-item" key={anime.mal_id}>
-                      <Link to={`/${anime.mal_id}`}>
+                    <div className="recomm-box-item" key={anime.anime.mal_id}>
+                      <Link to={`/${anime.anime.mal_id}`}>
                         <div className="single-box">
                           <div className="box-img-single">
                             <img
-                              src={anime.images.webp.large_image_url}
-                              alt={anime.title}
+                              src={anime.anime.images.webp.large_image_url}
+                              alt={anime.anime.title}
                             />
                           </div>
                           <div className="box-content-single">
                             <div className="single-title">
-                              <h4 className="text-img-single">{anime.title}</h4>
+                              <h4 className="text-img-single">
+                                {anime.anime.title}
+                              </h4>
                             </div>
-                            <p className="single-info">Type: {anime.type}</p>
+                            <p className="single-info">
+                              Occupation: {anime.position}
+                            </p>
                           </div>
                         </div>
                       </Link>
@@ -116,4 +121,4 @@ function Recommended() {
   );
 }
 
-export default Recommended;
+export default SatoshiKon;

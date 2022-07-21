@@ -3,6 +3,7 @@ import NavbarSingle from '../components/NavbarSingle';
 import Footer from '../components/Footer';
 import '../css/Single.css';
 import '../css/Recommended.css';
+import { Link } from 'react-router-dom';
 
 const getAnimes = async () => {
   try {
@@ -30,6 +31,7 @@ function IsaoTakahata() {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetchAnimes();
   }, [error]);
 
@@ -37,7 +39,7 @@ function IsaoTakahata() {
     <>
       <NavbarSingle />
       <header>
-        <div className="img-bg-takahata">
+        <div className="img-bg takahata">
           <h1 className="title-text">Isao Takahata</h1>
         </div>
       </header>
@@ -98,24 +100,26 @@ function IsaoTakahata() {
                 animesToRender.anime?.map((anime) => {
                   return (
                     <div className="recomm-box-item" key={anime.anime.mal_id}>
-                      <div className="single-box">
-                        <div className="box-img-single">
-                          <img
-                            src={anime.anime.images.webp.large_image_url}
-                            alt={anime.anime.title}
-                          />
-                        </div>
-                        <div className="box-content-single">
-                          <div className="single-title">
-                            <h4 className="text-img-single">
-                              {anime.anime.title}
-                            </h4>
+                      <Link to={`/${anime.anime.mal_id}`}>
+                        <div className="single-box">
+                          <div className="box-img-single">
+                            <img
+                              src={anime.anime.images.webp.large_image_url}
+                              alt={anime.anime.title}
+                            />
                           </div>
-                          <p className="single-info">
-                            Occupation: {anime.position}
-                          </p>
+                          <div className="box-content-single">
+                            <div className="single-title">
+                              <h4 className="text-img-single">
+                                {anime.anime.title}
+                              </h4>
+                            </div>
+                            <p className="single-info">
+                              Occupation: {anime.position}
+                            </p>
+                          </div>
                         </div>
-                      </div>
+                      </Link>
                     </div>
                   );
                 })
