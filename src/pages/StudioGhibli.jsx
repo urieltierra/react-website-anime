@@ -104,20 +104,21 @@ function StudioGhibli() {
       <div className="box-description">
         <form>
           <select
+            role="combobox"
             defaultValue=""
             name="directors"
             id="directors"
             onChange={handelOnChange}
           >
-            <option value="" disabled>
+            <option role="tab" value="" disabled>
               -- Select Director --
             </option>
-            <option>All</option>
-            <option>Isao Takahata</option>
-            <option>Hayao Miyazaki </option>
-            <option>Gorō Miyazaki </option>
-            <option>Yoshifumi Kondō </option>
-            <option>Hiromasa Yonebayashi</option>
+            <option role="tab">All</option>
+            <option role="tab">Isao Takahata</option>
+            <option role="tab">Hayao Miyazaki </option>
+            <option role="tab">Gorō Miyazaki </option>
+            <option role="tab">Yoshifumi Kondō </option>
+            <option role="tab">Hiromasa Yonebayashi</option>
           </select>
         </form>
       </div>

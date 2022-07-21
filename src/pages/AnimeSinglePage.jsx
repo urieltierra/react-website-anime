@@ -69,6 +69,20 @@ function AnimeSinglePage() {
             </p>
           </div>
         </div>
+        <div>
+          <p>
+            <span>Trailer:</span>
+          </p>
+          <iframe
+            width="560"
+            height="315"
+            src={animes.trailer?.embed_url}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
       </section>
       <Footer />
     </>
