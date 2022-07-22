@@ -27,7 +27,7 @@ function Recommended() {
               directed="Directed by Taichi Ishidate"
               composer="Music by Evan Call"
               premiered="Premiered: Winter 2018"
-              path="/isao-takahata"
+              path="/33352"
             />
             <RecommendedItem
               src={image2}
@@ -36,7 +36,7 @@ function Recommended() {
               directed="Directed by Tatsuya Ishihara"
               composer="Music by Jun Maeda"
               premiered="Premiered: Fall 2007"
-              path="/isao-takahata"
+              path="/2167"
             />
             <RecommendedItem
               src={image3}
@@ -45,7 +45,7 @@ function Recommended() {
               directed="Directed by Tomohiko Ito"
               composer="Music by Yūki Kajiura"
               premiered="Premiered: Winter 2016"
-              path="/isao-takahata"
+              path="/31043"
             />
             <RecommendedItem
               src={image4}
@@ -54,7 +54,7 @@ function Recommended() {
               directed="Directed by Hiroko Tokita"
               composer="Music by Hideharu Mori"
               premiered="Premiered: Fall 1989"
-              path="/isao-takahata"
+              path="/691"
             />
             <RecommendedItem
               src={image5}
@@ -90,7 +90,7 @@ function Recommended() {
               directed="Directed by Katsuhiro Ōtomo"
               composer="Music by Shoji Yamashiro"
               premiered="Premiered: Jul 16, 1988"
-              path="/isao-takahata"
+              path="/47"
             />
             <RecommendedItem
               src={image9}
@@ -99,7 +99,7 @@ function Recommended() {
               directed="Directed by Hiroshi Shidara"
               composer="Music by Takeo Watanabe"
               premiered="Premiered: Fall 1976"
-              path="/isao-takahata"
+              path="/2800"
             />
           </main>
         </div>

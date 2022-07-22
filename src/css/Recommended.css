@@ -66,10 +66,15 @@
 .recomm-box-item {
   box-shadow: rgb(50 50 105 / 15%) 0px 2px 5px 0px,
     rgb(0 0 0 / 5%) 0px 1px 1px 0px;
+  overflow: hidden;
 }
 .recomm-box-item img {
   max-width: 100%;
   width: 335px;
+  transition: 0.3s;
+}
+.recomm-box-item img:hover {
+  transform: scale(1.1);
 }
 #btn-recomm {
   margin: 25px auto;

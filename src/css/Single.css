@@ -69,6 +69,9 @@
   line-height: 25px;
   font-weight: 500;
 }
+.box-grid-single {
+  margin-top: -40px;
+}
 .animes {
   display: grid;
   grid-template-columns: repeat(3, 33%);
@@ -148,7 +151,9 @@ select {
   flex-direction: row;
   font-size: 30px;
   align-content: center;
-  margin: 100px auto;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 
 .container-single-left {
@@ -195,10 +200,52 @@ select {
   font-size: 14px;
   margin: 10px auto;
 }
-/* Responsive */
+.container-trailer {
+  max-width: 985px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+.video-youtube {
+  overflow: hidden;
+  padding-bottom: 550px;
+  position: relative;
+  height: 0;
+  background-image: url(../media/images/video-not-available.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 10px;
+}
+.video-youtube iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+@media (max-width: 960px) {
+  .container-single {
+    flex-direction: column;
+  }
+  .container-single-left {
+    flex: 100%;
+    margin: 0 auto;
+  }
+  .container-single-right {
+    flex: 100%;
+  }
+}
 @media screen and (max-width: 576px) {
   .title-text {
     font-size: 39px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .title-text {
+    font-size: 39px;
+  }
+  .container-single-left img {
+    width: 230px;
   }
 }
 @media screen and (max-width: 370px) {

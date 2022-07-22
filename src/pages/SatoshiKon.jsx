@@ -68,51 +68,53 @@ function SatoshiKon() {
           <div className="line-description"></div>
         </div>
       </div>
-      <div className="recomm">
-        <div className="recomm-container">
-          <div className="recomm-box">
-            <main className="grid">
-              {error ? (
-                <div id="error">
-                  <iframe
-                    src="https://gifer.com/embed/76cI"
-                    width={480}
-                    height={480}
-                    frameBorder={0}
-                    allowFullScreen
-                    title="ERROR"
-                  ></iframe>
-                </div>
-              ) : (
-                animes &&
-                animesToRender.anime?.map((anime) => {
-                  return (
-                    <div className="recomm-box-item" key={anime.anime.mal_id}>
-                      <Link to={`/${anime.anime.mal_id}`}>
-                        <div className="single-box">
-                          <div className="box-img-single">
-                            <img
-                              src={anime.anime.images.webp.large_image_url}
-                              alt={anime.anime.title}
-                            />
-                          </div>
-                          <div className="box-content-single">
-                            <div className="single-title">
-                              <h4 className="text-img-single">
-                                {anime.anime.title}
-                              </h4>
+      <div className="box-grid-single">
+        <div className="recomm">
+          <div className="recomm-container">
+            <div className="recomm-box">
+              <main className="grid">
+                {error ? (
+                  <div id="error">
+                    <iframe
+                      src="https://gifer.com/embed/76cI"
+                      width={480}
+                      height={480}
+                      frameBorder={0}
+                      allowFullScreen
+                      title="ERROR"
+                    ></iframe>
+                  </div>
+                ) : (
+                  animes &&
+                  animesToRender.anime?.map((anime) => {
+                    return (
+                      <div className="recomm-box-item" key={anime.anime.mal_id}>
+                        <Link to={`/${anime.anime.mal_id}`}>
+                          <div className="single-box">
+                            <div className="box-img-single">
+                              <img
+                                src={anime.anime.images.webp.large_image_url}
+                                alt={anime.anime.title}
+                              />
                             </div>
-                            <p className="single-info">
-                              Occupation: {anime.position}
-                            </p>
+                            <div className="box-content-single">
+                              <div className="single-title">
+                                <h4 className="text-img-single">
+                                  {anime.anime.title}
+                                </h4>
+                              </div>
+                              <p className="single-info">
+                                Occupation: {anime.position}
+                              </p>
+                            </div>
                           </div>
-                        </div>
-                      </Link>
-                    </div>
-                  );
-                })
-              )}
-            </main>
+                        </Link>
+                      </div>
+                    );
+                  })
+                )}
+              </main>
+            </div>
           </div>
         </div>
       </div>
