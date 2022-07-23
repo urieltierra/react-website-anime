@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/Navbar.css';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 
 function NavbarSingle() {
   const [click, setClick] = useState(false);
@@ -87,13 +85,17 @@ function NavbarSingle() {
                 Sign Up
               </Link>
             </li>
-            <Box sx={{ '& button': { m: 1 } }}>
-              <div className="btn-menu">
-                <Button variant="outlined" size="large" id="btn-navbar">
-                  Sign Up
-                </Button>
-              </div>
-            </Box>
+            <div className="navbar-social-icon">
+              <Link to="/facebook">
+                <i className="fa-brands fa-facebook"></i>
+              </Link>
+              <Link to="/twiiter">
+                <i className="fa-brands fa-twitter"></i>
+              </Link>
+              <Link to="/instagram">
+                <i className="fa-brands fa-instagram"></i>
+              </Link>
+            </div>
           </ul>
         </div>
       </nav>

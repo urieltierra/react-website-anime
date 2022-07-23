@@ -17,12 +17,12 @@ function Blog() {
             <BlogItem
               src={ImageBlog1}
               text="Because the classics never die: Akage no An"
-              path="/classics-akage-no-an"
+              path="/akage-no-an"
             />
             <BlogItem
               src={ImageBlog2}
               text="How 'Heidi' conquered Japan, sparking an anime revolution"
-              path="/heidi-conquered-japan"
+              path="/heidi-japan"
             />
           </ul>
           <ul className="blog-items">

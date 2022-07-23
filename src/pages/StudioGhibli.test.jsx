@@ -31,9 +31,9 @@ it('should allow user to change directors', () => {
   );
   userEvent.selectOptions(
     screen.getByRole('combobox'),
-    screen.getByRole('tab', { name: 'Isao Takahata' }),
+    screen.getByRole('tab', { name: 'Gorō Miyazaki' }),
   );
-  expect(screen.getByRole('tab', { name: 'Isao Takahata' }).selected).toBe(
+  expect(screen.getByRole('tab', { name: 'Gorō Miyazaki' }).selected).toBe(
     true,
   );
 });

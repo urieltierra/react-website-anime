@@ -10,7 +10,7 @@ describe('RecommendedAnime Page', () => {
       </MemoryRouter>,
     );
     await waitFor(() => {
-      screen.getByText('Akira');
+      screen.getByText('Violet Evergarden');
     });
   });
 });
